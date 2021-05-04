@@ -1,0 +1,25 @@
+{
+    "total-amount": "Valeur de la Propriété:",
+    "down-payment": "Acompte:",
+    "years": "Ans:",
+    "interest": "Intérêt:",
+    "monthly-amortization": "Amortissement Mensuel:",
+    "total-of-payments": "Total des Paiements:",
+    "monthly-payment": "Paiement Mensuel:",
+    "total-interest": "Intérêt Total:",
+    "total-payment": "Paiement Total:",
+    "year": "An",
+    "months": "Mois",
+    "principal": "Pricipal",
+    "settings": "Paramètres",
+    "rate-us": "Evaluez-nous",
+    "about": "À Propos",
+    "rate-us-text": "Vos commentaires nous aideront à améliorer l'application.",
+    "version": "Version:",
+    "developer": "Développeur:",
+    "currency": "€",
+    "locale": "fr",
+    "language": "Langue",
+    "format": "#.##0,00"
+
+}

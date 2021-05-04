@@ -1,0 +1,27 @@
+{
+    "total-amount": "Eigenschaftswert:",
+    "down-payment": "Anzahlung:",
+    "years": "Jahre:",
+    "interest": "Interesse:",
+    "monthly-amortization": "Monatliche Amortisation:",
+    "total-of-payments": "Summe der Zahlungen:",
+    "monthly-payment": "monatliche Zahlung:",
+    "total-interest": "Gesamtzins:",
+    "total-payment": "Gesamtzahlung:",
+    "year": "Jahr",
+    "months": "Monate",
+    "principal": "Pricipal",
+    "settings": "Einstellungen",
+    "rate-us": "Rate Us",
+    "about": "Über",
+    "rate-us-text": "Ihr Feedback hilft uns, die App zu verbessern.",
+    "version": "Version:",
+    "developer": "Entwickler:",
+    "currency": "€",
+    "locale": "de",
+    "language": "Sprache",
+    "format": "#.##0,00"
+
+}
+
+

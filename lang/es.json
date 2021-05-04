@@ -1,0 +1,25 @@
+{
+    "total-amount": "Valor de Propiedad:",
+    "down-payment": "Entrada:",
+    "years": "Años:",
+    "interest": "Interés:",
+    "monthly-amortization": "Amortización Mensual:",
+    "total-of-payments": "Total de Cuotas:",
+    "monthly-payment": "Cuota Mensual:",
+    "total-interest": "Interés Total:",
+    "total-payment": "Pago Total:",
+    "year": "año",
+    "months": "Meses",
+    "principal": "Capital",
+    "settings": "Configuración",
+    "rate-us": "Calificar Aplicación",
+    "about": "Información",
+    "rate-us-text": "Tus comentarios nos ayudarán a mejorar la aplicación.",
+    "version": "Versión:",
+    "developer": "Desarrollador:",
+    "currency": "€",
+    "locale": "es",
+    "language": "Idioma",
+    "format": "#.##0,00"
+}
+

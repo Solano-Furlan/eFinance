@@ -1,0 +1,25 @@
+{
+    "total-amount": "Property Value:",
+    "down-payment": "Down Payment:",
+    "years": "Years:",
+    "interest": "Interest:",
+    "monthly-amortization": "Monthly Amortization:",
+    "total-of-payments": "Total Of Payments:",
+    "monthly-payment": "Monthly Payment:",
+    "total-interest": "Total Interest:",
+    "total-payment": "Total Payment:",
+    "year": "Year",
+    "months": "Months",
+    "principal": "Pricipal",
+    "settings": "Settings",
+    "rate-us": "Rate Us",
+    "about": "About",
+    "rate-us-text": "Your Feedback will help us improve the app.",
+    "version": "Version:",
+    "developer": "Developer:",
+    "currency": "$",
+    "locale": "en",
+    "language": "App Language",
+    "format": "#,##0.00"
+
+}
