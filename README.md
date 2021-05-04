@@ -11,5 +11,6 @@ eFinance calculates mortgage and loan payments given principal, interest and ter
 <br>
 <br>
 <br>
+<br>
 
-*Copyright ©2021. All Rights Reserved. Permission to use, copy, modify, and distribute this software and its documentation for educational, research, and not-for-profit purposes, without fee and without a signed licensing agreement, is hereby granted, provided that the above copyright notice, this paragraph and the following two paragraphs appear in all copies, modifications, and distributions. Contact solanofurlan@outlook.com for commercial licensing opportunities.*
+*Copyright ©2021. All Rights Reserved. Permission to use, copy, modify, and distribute this software and its documentation for educational, research, and not-for-profit purposes, without fee and without a signed licensing agreement, is hereby granted, provided that this copyright notice appear in all copies, modifications, and distributions. Contact solanofurlan@outlook.com for commercial and licensing opportunities.*
