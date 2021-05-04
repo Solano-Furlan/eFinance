@@ -1,6 +1,6 @@
-# e_finance
+# eFinance
 
-A new Flutter project.
+eFinance calculates mortgage and loan payments given principal, interest and term. You can use the mortgage calculator to calculate house mortgage, auto loans or other types of loans. 
 
 ## Getting Started
 
