@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import '../app_localization.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RateUs extends StatelessWidget {
+  _launchURL() async {
+      const url = 'https://play.google.com/store/apps/details?id=com.solanofurlan.e_finance';
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    }
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -27,7 +36,7 @@ class RateUs extends StatelessWidget {
       ),
       content: GestureDetector(
         onTap: () {
-          print('Rate Us');
+         _launchURL();
         },
         child: Container(
           color: Colors.white,
