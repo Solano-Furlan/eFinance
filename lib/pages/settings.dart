@@ -28,9 +28,10 @@ class Settings extends StatelessWidget {
               alignment: Alignment.topCenter,
               child: Padding(
                 padding: EdgeInsets.only(
-                    top: responsiveHeight(30),
-                    left: responsiveHeight(15),
-                    right: responsiveHeight(15)),
+                    top: MediaQuery.of(context).viewPadding.top +
+                        (MediaQuery.of(context).size.height * 0.015),
+                    left: responsiveHeight(10),
+                    right: responsiveHeight(10)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -83,110 +84,11 @@ class Settings extends StatelessWidget {
                           fontWeight: FontWeight.w300),
                     ),
                     SizedBox(height: responsiveHeight(10)),
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: AppLocalizations.of(context)
-                                      .translate('locale') ==
-                                  'en'
-                              ? true
-                              : false,
-                          onChanged: (value) {
-                            dataLang.changeLanguage(Locale("en"));
-                          },
-                        ),
-                        Text(
-                          'English',
-                          style: TextStyle(
-                              fontSize: responsiveHeight(18),
-                              fontWeight: FontWeight.w300),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: AppLocalizations.of(context)
-                                      .translate('locale') ==
-                                  'pt'
-                              ? true
-                              : false,
-                          onChanged: (value) {
-                            dataLang.changeLanguage(Locale("pt"));
-                          },
-                        ),
-                        Text(
-                          'Português',
-                          style: TextStyle(
-                            fontSize: responsiveHeight(18),
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: AppLocalizations.of(context)
-                                      .translate('locale') ==
-                                  'es'
-                              ? true
-                              : false,
-                          onChanged: (value) {
-                            dataLang.changeLanguage(Locale("es"));
-                          },
-                        ),
-                        Text(
-                          'Español',
-                          style: TextStyle(
-                            fontSize: responsiveHeight(18),
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: AppLocalizations.of(context)
-                                      .translate('locale') ==
-                                  'de'
-                              ? true
-                              : false,
-                          onChanged: (value) {
-                            dataLang.changeLanguage(Locale("de"));
-                          },
-                        ),
-                        Text(
-                          'Deutsch',
-                          style: TextStyle(
-                            fontSize: responsiveHeight(18),
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Checkbox(
-                          value: AppLocalizations.of(context)
-                                      .translate('locale') ==
-                                  'fr'
-                              ? true
-                              : false,
-                          onChanged: (value) {
-                            dataLang.changeLanguage(Locale("fr"));
-                          },
-                        ),
-                        Text(
-                          'Français',
-                          style: TextStyle(
-                            fontSize: responsiveHeight(18),
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
-                      ],
-                    ),
+                    _languageCheckBox(context, 'en', 'English'),
+                    _languageCheckBox(context, 'pt', 'Português'),
+                    _languageCheckBox(context, 'es', 'Español'),
+                    _languageCheckBox(context, 'de', 'Deutsch'),
+                    _languageCheckBox(context, 'fr', 'Français'),
                   ],
                 ),
               ),
@@ -196,4 +98,29 @@ class Settings extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _languageCheckBox(BuildContext context, String lang, String title) {
+  final height = MediaQuery.of(context).size.height;
+  final dataLang = Provider.of<LanguageProvider>(context);
+  double responsiveHeight(pixels) {
+    return height * (pixels / 725);
+  }
+  return Row(
+    children: [
+      Checkbox(
+        value: AppLocalizations.of(context).translate('locale') == lang
+            ? true
+            : false,
+        onChanged: (value) {
+          dataLang.changeLanguage(Locale(lang));
+        },
+      ),
+      Text(
+        title,
+        style: TextStyle(
+            fontSize: responsiveHeight(18), fontWeight: FontWeight.w300),
+      ),
+    ],
+  );
 }
