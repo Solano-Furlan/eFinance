@@ -37,21 +37,17 @@ class DrawerMenu extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Container(
-                              height: height * 0.0733,
-                              width: height * 0.0733,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.white, width: 1),
-                                color: Theme.of(context).primaryColorLight,
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.attach_money,
-                                  color: Theme.of(context).primaryColor,
-                                  size: height * 0.0386,
+                                height: height * 0.0733,
+                                width: height * 0.0733,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border:
+                                      Border.all(color: Colors.white, width: 1),
+                                  color: Theme.of(context).primaryColorLight,
                                 ),
-                              ),
-                            ),
+                                child: ClipOval(
+                                  child: Image.asset('assets/icon/icon2.png'),
+                                )),
                             SizedBox(height: height * 0.006),
                             Text(
                               'eFinance',
@@ -67,14 +63,17 @@ class DrawerMenu extends StatelessWidget {
                     ),
                   ),
                 ),
-                _drawerButtons(
-                    context, Icons.settings, Colors.black26, AppLocalizations.of(context).translate('settings'), () {
-                      Navigator.of(context).pop();
-                      Navigator.of(context).pushNamed(Settings.routeName);
-                    }),
+                _drawerButtons(context, Icons.settings, Colors.black26,
+                    AppLocalizations.of(context).translate('settings'), () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).pushNamed(Settings.routeName);
+                }),
                 Divider(height: 0, thickness: 1),
-                _drawerButtons(context, Icons.star_border, Theme.of(context).primaryColor, AppLocalizations.of(context).translate('rate-us'),
-                    () {
+                _drawerButtons(
+                    context,
+                    Icons.star_border,
+                    Theme.of(context).primaryColor,
+                    AppLocalizations.of(context).translate('rate-us'), () {
                   Navigator.of(context).pop();
                   return showDialog(
                       context: context,
@@ -83,7 +82,8 @@ class DrawerMenu extends StatelessWidget {
                       }));
                 }),
                 Divider(height: 0, thickness: height * 0.0013),
-                _drawerButtons(context, Icons.info, Colors.black26, AppLocalizations.of(context).translate('about'), () {
+                _drawerButtons(context, Icons.info, Colors.black26,
+                    AppLocalizations.of(context).translate('about'), () {
                   Navigator.of(context).pop();
                   return showDialog(
                       context: context,
@@ -101,7 +101,7 @@ class DrawerMenu extends StatelessWidget {
 
   Widget _drawerButtons(BuildContext context, IconData icon, Color color, title,
       Function function) {
-        var height = MediaQuery.of(context).size.height;
+    var height = MediaQuery.of(context).size.height;
     return Material(
       color: Colors.white,
       child: InkWell(
@@ -109,7 +109,9 @@ class DrawerMenu extends StatelessWidget {
         highlightColor: Colors.black.withOpacity(.07),
         onTap: function,
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: height * (15 / height), vertical: height * (16 / height)),
+          margin: EdgeInsets.symmetric(
+              horizontal: height * (15 / height),
+              vertical: height * (16 / height)),
           child: Center(
             child: Row(
               children: <Widget>[
