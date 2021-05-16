@@ -18,7 +18,8 @@ class _CalculatorState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     final data = Provider.of<CalculatorProvider>(context);
-    final oCcy = new NumberFormat("#,##0.00", AppLocalizations.of(context).translate('locale'));
+    final oCcy = new NumberFormat(
+        "#,##0.00", AppLocalizations.of(context).translate('locale'));
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
@@ -66,6 +67,7 @@ class _CalculatorState extends State<Calculator> {
                       child: Column(
                         children: <Widget>[
                           TextFormField(
+                            maxLength: 15,
                             keyboardType: TextInputType.number,
                             controller: _totalAmountController,
                             style: TextStyle(fontSize: responsiveHeight(16)),
@@ -75,6 +77,7 @@ class _CalculatorState extends State<Calculator> {
                               data.calculateMonthlyPayment();
                             },
                             decoration: InputDecoration(
+                                counter: Offstage(),
                                 labelText: AppLocalizations.of(context)
                                     .translate('total-amount'),
                                 border: OutlineInputBorder(
@@ -320,8 +323,7 @@ class _CalculatorState extends State<Calculator> {
                         results(
                             AppLocalizations.of(context)
                                 .translate('total-payment'),
-                            AppLocalizations.of(context)
-                                    .translate('currency') +
+                            AppLocalizations.of(context).translate('currency') +
                                 oCcy.format(((data.monthlyPayment *
                                         data.totalOfPayments) +
                                     data.difference)),
